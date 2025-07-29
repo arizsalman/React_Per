@@ -8,10 +8,10 @@ function App() {
   // const [message, setMessage] = useState('Here!')
 
   async function handleClick() {
-    setPending(p=>p+1)
-    await delay (2000);
-    setPending(p=>p-1)
-    setCompelete(c=>c+1)
+    setPending(p => p + 1)
+    await delay(2000);
+    setPending(p => p - 1)
+    setCompelete(c => c + 1)
 
   }
   const [pending, setPending] = useState(0)
@@ -54,8 +54,8 @@ function App() {
 
       <div>
         <h1>pending : {pending}</h1>
-        <h1> compelete : {compelete} </h1>
-        <button  onClick={handleClick}>Buy</button>
+        <h1> compeleted product : {compelete} </h1>
+        <button onClick={handleClick}>Buy</button>
       </div>
 
       <section>
@@ -70,7 +70,7 @@ function App() {
 
   function delay(ms) {
     return new Promise(resolve => {
-      setTimeout(resolve,ms);
+      setTimeout(resolve, ms);
     })
   }
 }

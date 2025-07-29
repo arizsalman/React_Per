@@ -52,11 +52,11 @@ function App() {
         <button type="submit">Send</button>
       </form> */}
 
-      {/* <div>
+      <div>
         <h1>pending is Done : {pending}</h1>
         <h1> compeleted product : {compelete} </h1>
         <button onClick={handleClick}>Buy</button>
-      </div> */}
+      </div>
 
       <section>
         <h1>My react porject  </h1>

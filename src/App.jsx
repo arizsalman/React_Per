@@ -7,31 +7,11 @@ function App() {
   // const [isSent, setIsSent] = useState(false)
   // const [message, setMessage] = useState('Here!')
 
-   function Form() {
-    const [person, setPerson] = useState({
-      firstName: 'Barbara',
-      lastName: 'Hepworth',
-      email: 'bhepworth@sculpture.com'
-    });
-  
-    function handleFirstNameChange(e) {
-      person.firstName = e.target.value;
-    }
-  
-    function handleLastNameChange(e) {
-      person.lastName = e.target.value;
-    }
-  
-    function handleEmailChange(e) {
-      person.email = e.target.value;
-    }
-  
-
   async function handleClick() {
-    setPending(p => p + 1)
-    await delay(2000);
-    setPending(p => p - 1)
-    setCompelete(c => c + 1)
+    setPending(p=>p+1)
+    await delay (2000);
+    setPending(p=>p-1)
+    setCompelete(c=>c+1)
 
   }
   const [pending, setPending] = useState(0)
@@ -51,42 +31,14 @@ function App() {
     )
   }
 
-}
+
   return (
 
 
 
     <div>
 
-      <div>
-        <label>
-        First name:
-        <input
-          value={person.firstName}
-          onChange={handleFirstNameChange}
-        />
-      </label>
-      <label>
-        Last name:
-        <input
-          value={person.lastName}
-          onChange={handleLastNameChange}
-        />
-      </label>
-      <label>
-        Email:
-        <input
-          value={person.email}
-          onChange={handleEmailChange}
-        />
-      </label>
-      <p>
-        {person.firstName}{' '}
-        {person.lastName}{' '}
-        ({person.email})
-      </p>
-      </div>
-      {/* <form onSubmit={(e) => (
+      <form onSubmit={(e) => (
         e.preventDefault(),
         setIsSent(true),
         sendMassage(message)
@@ -98,12 +50,12 @@ function App() {
         >
         </textarea>
         <button type="submit">Send</button>
-      </form> */}
+      </form>
 
       <div>
-        <h1>pending is Done : {pending}</h1>
-        <h1> compeleted product : {compelete} </h1>
-        <button onClick={handleClick}>Buy</button>
+        <h1>pending : {pending}</h1>
+        <h1> compelete : {compelete} </h1>
+        <button  onClick={handleClick}>Buy</button>
       </div>
 
       <section>
@@ -112,15 +64,15 @@ function App() {
       </section>
     </div>
   )
-  // function sendMassage() {
+  function sendMassage() {
 
-  // }
+  }
 
   function delay(ms) {
     return new Promise(resolve => {
-      setTimeout(resolve, ms);
+      setTimeout(resolve,ms);
     })
   }
 }
 
-export default App 
+export default App

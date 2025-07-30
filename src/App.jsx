@@ -8,10 +8,10 @@ function App() {
   // const [message, setMessage] = useState('Here!')
 
   async function handleClick() {
-    setPending(p=>p+1)
-    await delay (2000);
-    setPending(p=>p-1)
-    setCompelete(c=>c+1)
+    setPending(p => p + 1)
+    await delay(2000);
+    setPending(p => p - 1)
+    setCompelete(c => c + 1)
 
   }
   const [pending, setPending] = useState(0)
@@ -40,7 +40,10 @@ function App() {
 
 
 
-      <h1> Kya hume PYTHON Karna  Chaheye ! </h1>
+      <h1> Kya hume PYTHON Karna  Chahe </h1>
+      <h2>Answer me </h2>
+      <h3> YES </h3>
+      <h4>Done it But CONSISTANLY & HARDWORK  OTHERWISE YOO LOST THE TIME </h4>
 
 
       <form onSubmit={(e) => (
@@ -60,7 +63,7 @@ function App() {
       <div>
         <h1>pending : {pending}</h1>
         <h1> compelete : {compelete} </h1>
-        <button  onClick={handleClick}>Buy</button>
+        <button onClick={handleClick}>Buy</button>
       </div>
 
       <section>
@@ -75,7 +78,7 @@ function App() {
 
   function delay(ms) {
     return new Promise(resolve => {
-      setTimeout(resolve,ms);
+      setTimeout(resolve, ms);
     })
   }
 }
